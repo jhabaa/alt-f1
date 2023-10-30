@@ -12,16 +12,17 @@ body{
     header{
         height: 100px;
         width: 100%;
-        background-color: #e2e2e2;
+        
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         img{
             width: 100px;
             height: 100px;
             object-fit: cover;
             margin: 0px 20px;
+            border-radius: 2rem;
         }
         .links{
             display: flex;
@@ -59,15 +60,18 @@ body{
         }
     }
     .row_container{
-        margin: 100px 100px;
         display: flex;
         flex-direction: row;
+        max-width: 1500px;
         align-items: center;
         justify-content: center;
         gap: 20px;
         overflow: hidden;
+        user-select: none;
+        transition: all 0.5s ease-in-out;
         .nav{
-            width: 90%;
+            width: 70%;
+            min-width: 1000px;
             position: fixed;
             z-index: 5;
             display: flex;
@@ -76,13 +80,15 @@ body{
             
             .side{
                 position: relative;
-                background-color: #e2e2e2;
+                background-color: #004cff;
+                color: #e2e2e2;
+                
                 display: flex;
                 justify-content: center;
                 justify-items: center;
                 align-items: center;
-                padding: 10px 20px;
-                border-radius: 10px;
+                
+                border-radius: 100%;
                 .navigator{
                     width: 50px;
                     height: 50px;
@@ -105,6 +111,7 @@ body{
             justify-content: left;
             z-index: 1;
             transform: translateX(0px);
+            transition: all 0.5s ease-in-out;
             .lspacer{
                 display: block;
                 width: 100px; // This will just grow to move the container to the right
@@ -118,6 +125,7 @@ body{
                 margin-inline: 10px;
                 width: 400px;
                 min-width: 400px;
+                height: 500px;
                 //height: 500px;
                 border: 1px solid #ccc;
                 border-radius: 10px;
@@ -126,40 +134,111 @@ body{
                 display: none;
                 flex-direction: column;
                 transition: all 0.5s ease-in-out;
+                &:hover{
+                    scale: 1.01;
+                    
+                }
+                .head{
+                    position: absolute;
+                    padding: 10px;
+                    width: 350px;
+                    display: flex;
+                    justify-content: space-between;
+                    span{
+                        background-color: #3f79ff;
+                        color: #e2e2e2;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                    }
+                    .like{
+                        backdrop-filter: blur(5rem);
+                        color: #e2e2e2;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                        transition: all 0.5s ease-in-out;
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            
+                        }
+                        //if unlike then
+                        .like_heart{
+                            visibility: hidden;
+                            transition: all 0.2s ease-in-out;
+                        }
+                        &:hover{
+                            fill: #e2e2e2;
+                            transition: all 0.2s ease-in-out;
+                            .like_heart{
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
                 img{
                     width: 100%;
                     height: 200px;
                     object-fit: cover;
                 }
-        
-                h5{
-                    text-align: left;
-                    margin: 2px 0;
-                    padding: 0px 0px;
-                    font-weight: 500;
+                .content{
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    .title{
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                    }
+                    .desc{
+                        font-weight: 300;
+                        font-size: 1rem;
+                        text-overflow: ellipsis;
+                        text-align: justify;
+                        padding-top: 20px;
+                    }
+                   
+                    h5{
+                        text-align: left;
+                        margin: 2px 0;
+                        padding: 0px 0px;
+                        font-weight: 500;
+                    }
+                    h4{
+                        text-align: left;
+                        margin: 2px 0;
+                        padding: 0px 0px;
+                        font-weight: 800;
+                    }
+                    h6{
+                        text-align: left;
+                        margin: 2px 0;
+                        padding: 0px 0px;
+                        font-weight: 300;
+                    }
+                    p{
+                        text-align: left;
+                        margin: 2px 0;
+                        padding: 0px 0px;
+                        font-weight: 300;
+                    }
                 }
-                h4{
-                    text-align: left;
-                    margin: 2px 0;
-                    padding: 0px 0px;
-                    font-weight: 800;
-                }
-                h6{
-                    text-align: left;
-                    margin: 2px 0;
-                    padding: 0px 0px;
-                    font-weight: 300;
-                }
-                p{
-                    text-align: left;
-                    margin: 2px 0;
-                    padding: 0px 0px;
-                    font-weight: 300;
-                }
+                
             }
             
             
         }
+    }
+
+    footer{
+        position: fixed;
+        bottom: 10px;
+        opacity: 0.5;
+        font-weight: 100;
     }
 }
 

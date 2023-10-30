@@ -12,17 +12,17 @@ body {
 body header {
   height: 100px;
   width: 100%;
-  background-color: #e2e2e2;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 body header img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   margin: 0px 20px;
+  border-radius: 2rem;
 }
 body header .links {
   display: flex;
@@ -59,16 +59,19 @@ body .search input:focus {
   outline: none;
 }
 body .row_container {
-  margin: 100px 100px;
   display: flex;
   flex-direction: row;
+  max-width: 1500px;
   align-items: center;
   justify-content: center;
   gap: 20px;
   overflow: hidden;
+  user-select: none;
+  transition: all 0.5s ease-in-out;
 }
 body .row_container .nav {
-  width: 90%;
+  width: 70%;
+  min-width: 1000px;
   position: fixed;
   z-index: 5;
   display: flex;
@@ -77,13 +80,13 @@ body .row_container .nav {
 }
 body .row_container .nav .side {
   position: relative;
-  background-color: #e2e2e2;
+  background-color: #004cff;
+  color: #e2e2e2;
   display: flex;
   justify-content: center;
   justify-items: center;
   align-items: center;
-  padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 100%;
 }
 body .row_container .nav .side .navigator {
   width: 50px;
@@ -101,6 +104,7 @@ body .row_container .container {
   justify-content: left;
   z-index: 1;
   transform: translateX(0px);
+  transition: all 0.5s ease-in-out;
 }
 body .row_container .container .lspacer {
   display: block;
@@ -115,6 +119,7 @@ body .row_container .container .card {
   margin-inline: 10px;
   width: 400px;
   min-width: 400px;
+  height: 500px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 2px 2px 10px #ccc;
@@ -123,34 +128,100 @@ body .row_container .container .card {
   flex-direction: column;
   transition: all 0.5s ease-in-out;
 }
+body .row_container .container .card:hover {
+  scale: 1.01;
+}
+body .row_container .container .card .head {
+  position: absolute;
+  padding: 10px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+body .row_container .container .card .head span {
+  background-color: #3f79ff;
+  color: #e2e2e2;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+body .row_container .container .card .head .like {
+  backdrop-filter: blur(5rem);
+  color: #e2e2e2;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .container .card .head .like svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+body .row_container .container .card .head .like .like_heart {
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+body .row_container .container .card .head .like:hover {
+  fill: #e2e2e2;
+  transition: all 0.2s ease-in-out;
+}
+body .row_container .container .card .head .like:hover .like_heart {
+  visibility: visible;
+}
 body .row_container .container .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-body .row_container .container .card h5 {
+body .row_container .container .card .content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+body .row_container .container .card .content .title {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+body .row_container .container .card .content .desc {
+  font-weight: 300;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  text-align: justify;
+  padding-top: 20px;
+}
+body .row_container .container .card .content h5 {
   text-align: left;
   margin: 2px 0;
   padding: 0px 0px;
   font-weight: 500;
 }
-body .row_container .container .card h4 {
+body .row_container .container .card .content h4 {
   text-align: left;
   margin: 2px 0;
   padding: 0px 0px;
   font-weight: 800;
 }
-body .row_container .container .card h6 {
+body .row_container .container .card .content h6 {
   text-align: left;
   margin: 2px 0;
   padding: 0px 0px;
   font-weight: 300;
 }
-body .row_container .container .card p {
+body .row_container .container .card .content p {
   text-align: left;
   margin: 2px 0;
   padding: 0px 0px;
   font-weight: 300;
+}
+body footer {
+  position: fixed;
+  bottom: 10px;
+  opacity: 0.5;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=style.css.map */

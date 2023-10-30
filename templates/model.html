@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Model 1</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../static/css/style.css">
@@ -25,9 +25,11 @@
                 <a href="#">Contact</a>
             </div>
         </header>
+        <!--Search Bar (fake)-->
         <div class="search">
             <input type="text" placeholder="Search for a house ">
         </div>
+        <!--Slider-->
         <section class="row_container">
             <div class="nav">
                 <div class="side">
@@ -45,80 +47,246 @@
             
             <div class="container">
                 <div class="card">
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
                     <img src="../static/picture1.jpg" alt="1">
-                    <h5>Appartement</h5>
-                    <h4>250.000€</h4>
-                    <h6>120 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>250.000€</h4>
+                        <h6>120 m²</h6>
+                        <p>1000 Bruxelles</p>
+                        <span class="desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, tenetur nihil iure perferendis deserunt quibusdam modi excepturi. Rem, ex earum expedita consequuntur perferendis enim ipsa, repellendus aut, corporis repudiandae modi?
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture2.jpg" alt="2">
-                    <h5>Villa</h5>
-                    <h4>140.000€</h4>
-                    <h6>60 m^2</h6>
-                    <p>1190 Forest</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture2.jpg" alt="1">
+                    <div class="content">
+                        <h5>Maison</h5>
+                        <h4>350,000€</h4>
+                        <h6>180 m²</h6>
+                        <p>75016 Paris</p>
+                        <span class="desc">
+                            Charmante maison de ville avec jardin située dans le quartier résidentiel de Passy. Proche des écoles et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture3.jpg" alt="3">
-                    <h5>Villa</h5>
-                    <h4>300.000€</h4>
-                    <h6>150 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture3.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture4.jpg" alt="4">
-                    <h5>Appartement</h5>
-                    <h4>200.000€</h4>
-                    <h6>100 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture4.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture5.jpg" alt="5">
-                    <h5>Maison</h5>
-                    <h4>250.000€</h4>
-                    <h6>120 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture5.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture6.jpg" alt="6">
-                    <h5>Appartement</h5>
-                    <h4>250.000€</h4>
-                    <h6>120 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture6.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture7.jpg" alt="7">
-                    <h5>Appartement</h5>
-                    <h4>250.000€</h4>
-                    <h6>120 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture7.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture8.jpg" alt="8">
-                    <h5>Maison</h5>
-                    <h4>250.000€</h4>
-                    <h6>120 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture8.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture9.jpg" alt="9">
-                    <h5>Appartement</h5>
-                    <h4>250.000€</h4>
-                    <h6>120 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture9.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="../static/picture10.jpg" alt="10">
-                    <h5>Appartement</h5>
-                    <h4>250.000€</h4>
-                    <h6>120 m^2</h6>
-                    <p>1000 Bruxelles</p>
+                    <div class="head">
+                        <Span>Nouveau</Span>
+                        <div class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart unlike_heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.060.055.119.112.176.171a3.120 3.120 0 0 1 .176-.170C12.720-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill like_heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="../static/picture10.jpg" alt="2">
+                    <div class="content">
+                        <h5>Appartement</h5>
+                        <h4>180,000€</h4>
+                        <h6>90 m²</h6>
+                        <p>69002 Lyon</p>
+                        <span class="desc">
+                            Bel appartement récemment rénové en plein cœur de Lyon. Proche des transports en commun et des commerces.
+                        </span>
+                    </div>
                 </div>
+                <!--Cards Autogenerated-->
+
+                
             </div>
            
         </section>
         
-        
+        <!--read down tag :=) -->
+        <footer>
+            2023@Copywrite j-hubert for ALT-F1
+        </footer>
         <script src="../static/js/script.js" async defer></script>
     </body>
 </html>
