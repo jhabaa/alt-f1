@@ -1,46 +1,71 @@
 // Get buttons
 const back_btn = document.querySelector("#back_btn")
 const fordward_btn = document.querySelector("#forward_btn")
-// Get Spacers
-const left_spacer = document.querySelector(".lspacer")
-const right_spacer = document.querySelector(".rspacer")
+
 var container = document.querySelector(".container")
-var index = 2; // Display 3 images at a time
+
 let cards = document.querySelectorAll(".card")
 var images_count = document.querySelectorAll(".card").length - 1;
-
+var indexes = [0,1,2] // Init with 23 firsts pictures that we want to display
 // Print the first 3 cards
-for (let i = 0; i <= index; i++) {
-    cards[i].style.display = "flex"; // Start at index 3 (3 images are displayed)
-}
+
+indexes.forEach((index) => {
+    cards[index].style.display = "flex";
+});
+
 
 back_btn.addEventListener("click", () => {  
-    //MARK: Switch On 3 previous cards
-    for (let i = index - 6; i < index - 3; i++) {
-        cards[i].style.display = "flex";
+    //MARK: Get images availables in the left
+    let images_availables_on_left = indexes[0] > 3 ? 3 : indexes[0];
+    //MARK: Create a new array with indexes move to the left by the images count in the left
+    let new_indexes = indexes.map((index) => index - images_availables_on_left);
+    console.log("go to new_indexes: ", new_indexes)
+    //MARK: Set indexes to True
+    new_indexes.forEach((index) => {
+        cards[index].style.display = "flex";
+    });
+    //MARK: Set indexes to False
+    indexes.forEach((index) => {
+        if (!new_indexes.includes(index)){
+            cards[index].style.display = "none";
+        }
+    });
+    //MARK: Update indexes
+    indexes = new_indexes;
+    //MARK: Hide the left button if there is no more images to display
+    if (indexes[0] == 0){
+        back_btn.style.display = "none";
     }
-    //MARK: Switch Off 3 next cards
-    for (let i = index - 3; i < index; i++) {
-        cards[i].style.display = "none";
+    //MARK: Show the right button if there is more images to display
+    if (indexes[indexes.length - 1] < images_count){
+        fordward_btn.style.display = "flex";
     }
-    index -= 3; // Decrement
 })
 fordward_btn.addEventListener("click", () => {
-    let cars_available = (images_count - index +1) >= 3 ? 3 : 1; // Get the number of cars available with a maximum of three. Else, just display the remaining cars
-    let startIndex = index - cars_available < 0 ? 0 : index - cars_available;
-    //logic
-    //Foreach next cards availables, make true
-    for (let i = index; i < index + cars_available; i++) {
-        cards[i+1].style.display = "flex";
+    //MARK: Get imges availables in the right
+    let images_availables_on_right = images_count - indexes[indexes.length - 1] > 3 ? 3 : images_count - indexes[indexes.length - 1];
+    //MARK: Create a new array with indexes move to the right by the images count in the right
+    let new_indexes = indexes.map((index) => index + images_availables_on_right);
+    console.log("go to new_indexes: ", new_indexes)
+    //MARK: Set indexes to True
+    new_indexes.forEach((index) => {
+        cards[index].style.display = "flex";
+    });
+    //MARK: Set indexes to False
+    indexes.forEach((index) => {
+        if (!new_indexes.includes(index)){
+            cards[index].style.display = "none";
+        }
+    });
+    
+    //MARK: Update indexes
+    indexes = new_indexes;
+    //MARK: Hide the right button if there is no more images to display
+    if (indexes[indexes.length - 1] == images_count){
+        fordward_btn.style.display = "none";
     }
-    //set Index
-    index += cars_available;
-    //Foreach previous cards, make false from the start index
-    for (let i = startIndex; i < startIndex+cars_available; i++) {
-        cards[i].style.display = "none";
+    //MARK: Show the left button if there is more images to display
+    if (indexes[0] > 0){
+        back_btn.style.display = "flex";
     }
-    //Print values of all cards
-    cards.forEach((card) => {
-        console.log(card.style.display)
-    })
 }) 
