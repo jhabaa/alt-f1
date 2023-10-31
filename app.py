@@ -55,9 +55,17 @@ for i in range(5):
 from flask import Flask, jsonify, render_template
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/1')
 def home():
-    return render_template('index.html', objects=objects)
+    return render_template('model.html', objects=objects)
+
+@app.route('/2')
+def home2():
+    return render_template('model2.html', objects=objects)
+
+@app.route('/')
+def home3():
+    return render_template('model.html', objects=objects)
 
 #run
 if __name__ == "__main__":

@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@200&family=Roboto:wght@100;300;500&display=swap");
+body {
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 0px;
+  margin: 0px;
+}
+body header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #e2e2e2;
+  position: fixed;
+  top: 0;
+}
+body header img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0px 20px;
+  border-radius: 2rem;
+}
+body header .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 20px;
+  gap: 20px;
+  font-weight: 100;
+}
+body header .links a {
+  text-decoration: none;
+  color: #e2e2e2;
+  font-weight: 300;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+body header .links a:hover {
+  color: rgba(0, 181, 231, 0.4666666667);
+}
+body header .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+body header .user svg {
+  padding: 10px;
+  background-color: #e2e2e2;
+  color: gray;
+  border-radius: 2rem;
+}
+body #background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+  filter: brightness(0.7);
+}
+body .row_container {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  user-select: none;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .presentation {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  flex-shrink: 1;
+  width: 50vw;
+  gap: 0px;
+  margin-left: 100px;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .presentation h1 {
+  font: "Black Ops One", cursive;
+  font-size: calc(3vw + 3vh);
+  padding: 0%;
+  font-weight: 500;
+  margin: 0px 0px;
+  color: #e2e2e2;
+}
+body .row_container .presentation p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  color: #e2e2e2;
+  text-align: justify;
+}
+body .row_container .presentation button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+  border: none;
+  background-color: #437bff;
+  color: #e2e2e2;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .presentation button:hover {
+  background-color: rgba(0, 181, 231, 0.4666666667);
+}
+body .row_container .container {
+  overflow: hidden;
+  width: 50vw;
+  gap: 0px;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .container .nav {
+  margin-top: 50px;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+body .row_container .container .nav .side {
+  position: relative;
+  background-color: #000000;
+  color: #e2e2e2;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border-radius: 100%;
+}
+body .row_container .container .nav .side .navigator {
+  width: 50px;
+  height: 50px;
+  box-shadow: 5px inset #ccc;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .container .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 20vw;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .container .cards .card {
+  position: relative;
+  margin-inline: 10px;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  width: 20vw;
+  height: calc(25vw + 10vh);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+body .row_container .container .cards .card.show {
+  scale: 1.01;
+}
+body .row_container .container .cards .card:hover {
+  scale: 1.01;
+}
+body .row_container .container .cards .card .head {
+  height: 50px;
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  align-items: baseline;
+  justify-items: flex-start;
+}
+body .row_container .container .cards .card .head .stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .row_container .container .cards .card .head .stars .star {
+  color: #e2e2e2;
+  font-size: 1rem;
+  margin: 0px 2px;
+}
+body .row_container .container .cards .card .head .city {
+  color: #e2e2e2;
+  font-weight: 500;
+  font-size: calc(0.5vw + 1vh);
+}
+body .row_container .container .cards .card .infos {
+  background-color: #ffffff;
+  border-radius: 2rem;
+}
+body .row_container .container .cards .card .infos .more {
+  position: absolute;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  bottom: 0px;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  border-radius: 0rem 0rem 2rem 2rem;
+}
+body .row_container .container .cards .card .infos .more.show {
+  display: flex;
+}
+body .row_container .container .cards .card .infos .more .price {
+  color: #e2e2e2;
+  font-weight: 800;
+  font-size: calc(0.5vw + 1vh);
+  text-shadow: 0px 0px 10px #5b5b5b;
+}
+body .row_container .container .cards .card .infos .more .rooms {
+  color: #e2e2e2;
+  font-weight: 500;
+  font-size: calc(0.2vw + 1vh);
+  text-shadow: 0px 0px 10px #404040;
+}
+body .row_container .container .cards .card .infos img {
+  display: flex;
+  width: 100%;
+  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
+  object-fit: cover;
+  height: calc(25vw + 1vh);
+  transition: all 0.5s ease-in-out;
+  border-radius: 2rem;
+}
+body .row_container .container .cards .card .infos img:hover {
+  flex-grow: 2;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+body .row_container .container .cards .card .infos img.show {
+  flex-grow: 3;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+body footer {
+  position: fixed;
+  color: #e2e2e2;
+  bottom: 10px;
+  opacity: 0.5;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=style2.css.map */
